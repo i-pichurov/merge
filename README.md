@@ -1,10 +1,17 @@
 # Required
 
-Python: 3.12.3\ (python3 --version)
+Python: 3.12.3\
 
-Pip: 24.0\ (python3 -m pip --version) - ставится вместе с питоном
+    python3 --version
 
-Poetry: 1.8.3 (poetry --version) 
+Pip: 24.0\ - ставится вместе с питоном
+
+    python3 -m pip --version
+
+Poetry: 1.8.3
+
+    poetry --version
+    
 - ставится так: https://github.com/python-poetry/install.python-poetry.org
 - или так: https://python-poetry.org/docs/#installing-with-pipx
   
