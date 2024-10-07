@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "merge-list-project"
+version = "0.1.0"
+description = ""
+authors = ["i-pichurov <deadbassein@gmail.com>"]
+readme = "README.md"
+packages = [
+  { include = "merge" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pip = "^24.2"
+
+[tool.poetry.scripts]
+merge = "merge.scripts.merge:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
