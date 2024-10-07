@@ -13,7 +13,7 @@ parser.add_argument(
     help='Input second file for comparison')
 parser.add_argument(
     'output_file', type=str,
-    help='Input second file for comparison')
+    help='Input file for saving result')
 args = parser.parse_args()
 
 
