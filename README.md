@@ -10,9 +10,9 @@ Poetry: 1.8.3 (poetry --version)
   
 pipx (если в системе стоит Homebrev)
 - ставится так:
-brew install pipx
 
-pipx ensurepath
+      brew install pipx
+      pipx ensurepath
 
 # Installing
 
