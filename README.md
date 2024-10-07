@@ -9,10 +9,10 @@ Poetry: 1.8.3 (poetry --version)
 - или так: https://python-poetry.org/docs/#installing-with-pipx
   
 pipx (если в системе стоит Homebrev)
-- ставится так:
+ставится так:
 
-      brew install pipx
-      pipx ensurepath
+    brew install pipx
+    pipx ensurepath
 
 # Installing
 
