@@ -35,6 +35,6 @@ Install the package using the command in the Makefile:
 
 After installing the package use:
 
-    merge 'path_file1' 'path_file2' 'path_output_file'
+    merge 'path_file1' 'path_file2' 'path_file3' 'path_output_file'
     or
     merge -h 
