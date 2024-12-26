@@ -12,13 +12,16 @@ parser.add_argument(
     'second_file', type=str,
     help='Input second file for comparison')
 parser.add_argument(
+    'third_file', type=str,
+    help='Input third file for comparison')
+parser.add_argument(
     'output_file', type=str,
     help='Input file for saving result')
 args = parser.parse_args()
 
 
 def main():
-    merge(args.first_file, args.second_file, args.output_file)
+    merge(args.first_file, args.second_file, args.third_file, args.output_file)
 
 
 if __name__ == '__main__':
