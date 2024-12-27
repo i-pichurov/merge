@@ -1,21 +1,13 @@
+Скрипт принимает 3 txt-файла со списками и сохраняет в 4-й новый файл результат их слияния без повторений.
+
 # Required
 
-Python: 3.12.3\
+Git  
+Python 3.9 или новее  
+Homebrew 4.4.10 или новее  
+Poetry: 1.8.3 или новее  
+Pipx 1.7.0 или новее
 
-    python3 --version
-
-Pip: 24.0\ - ставится вместе с питоном
-
-    python3 -m pip --version
-
-Poetry: 1.8.3
-
-    poetry --version
-    
-- ставится так: https://github.com/python-poetry/install.python-poetry.org
-- или так: https://python-poetry.org/docs/#installing-with-pipx
-  
-pipx (если в системе стоит Homebrev)
 ставится так:
 
     brew install pipx
@@ -23,18 +15,69 @@ pipx (если в системе стоит Homebrev)
 
 # Installing
 
-Copy the contents of the repository:
+Проверяем, установлен ли на устройстве Python3, командой:
+    
+    git clone git@github.com:i-pichurov/sync_dns-project.git
+Если нет - ставим через приложение Self Service.
+
+Ставим Homebrew (это менеджер пакетов для macOS, который упрощает установку многих программ), с помощью команды:
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+Проверяем наличие и версию командой:
+    
+    brew --version
+
+Ставим Poetry (это инструемент для управления зависимосятми, публикации и установки пакетов Python) с помощью команды:
+
+    brew install poetry
+Проверяем наличие и версию командой:
+
+    poetry --version
+
+Проверяем, установлен ли на устройстве Git, командой:
+    
+    git --version
+Если нет, ставим через homebrew командой:
+
+    brew install git
+Проверяем наличие и версию командой:
+    
+    git --version
+
+Ставим pipx (это инструмент для изоляции Python-пакетов и управления ими, поможет нам безопасно установить скрипт и пользоваться им на устройстве так, как будто мы установили его в глобальную среду Python) через homebrew командой:
+
+    brew install pipx
+
+Проверяем наличие и версию командой:
+    
+    pipx --version
+
+Клонируем скрипт из репозитория командой:
     
     git clone git@github.com:i-pichurov/merge.git
-    
-Install the package using the command in the Makefile:
-    
-    make package-install
-    or 
-    pipx install dist/*.whl (если в системе стоит Homebrev)
 
-After installing the package use:
+Открываем директорию проекта:
+    
+    cd merge
 
-    merge 'path_file1' 'path_file2' 'path_file3' 'path_output_file'
-    or
-    merge -h 
+Устанавливаем зависимости проекта с помощью poetry:
+    
+    poetry install
+
+Создаем исполняемый файл с помощью poetry:
+
+    poetry build
+
+Устанавливаем созданный пакет в изолированное виртуальной окружение, сохраняя при это доступ самого скрипта к файлам нашей системы, с помощью pipx:
+
+    pipx install dist/*.whl
+    
+После этого мы можем использовать скрипт из любой директории устройства с помощью команды 'merge'. Для получения справки используем команду:
+
+    merge -h
+
+Пример применения:
+
+    merge test1.txt test2.txt test3.txt test_result.txt
+
+В данном случае порядок установки отличается от установки скрипта 'sync_dns-project', поскольку здесь нам важно, чтобы скрипт мог взаимодействовать с файлами системы, а не только запускаться в своем виртуальном окружении.
