@@ -12,7 +12,7 @@ Pipx 1.7.0 или новее
 
 Проверяем, установлен ли на устройстве Python3, командой:
     
-    git clone git@github.com:i-pichurov/sync_dns-project.git
+    python3 --version
 Если нет - ставим через приложение Self Service.
 
 Ставим Homebrew (это менеджер пакетов для macOS, который упрощает установку многих программ), с помощью команды:
